@@ -10,16 +10,17 @@ import AddImage2 from "../../assets/img/add/2.png";
 import AddImage3 from "../../assets/img/add/3.png";
 import AddImage4 from "../../assets/img/add/4.png";
 
-export default function Services() {
+export default function Services({selectAction,inputFile,handleFileInputChange}) {
+  
   return (
     <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
+      {/* <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <ClientSlider />
         </div>
-      </div>
+      </div> */}
       <div className="whiteBg" style={{ padding: "60px 0" }}>
-        <div className="container">
+        {/* <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Services</h1>
             <p className="font13">
@@ -54,8 +55,8 @@ export default function Services() {
               <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
-        </div>
-        <div className="lightBg">
+        </div> */}
+        <div className="lightBg" id="upload-section">
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
@@ -67,11 +68,13 @@ export default function Services() {
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
                   <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
+                  <input type='file' id='file' accept='.png, .jpg, .jpeg' ref={inputFile} style={{display: 'none'}} onChange={(e) => handleFileInputChange(e)}/>
+
+                    <FullButton title="Select a file" action={() => selectAction()} />
                   </div>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
+                  {/* <div style={{ width: "190px", marginLeft: "15px" }}>
                     <FullButton title="Contact Us" action={() => alert("clicked")} border />
-                  </div>
+                  </div> */}
                 </ButtonsRow>
               </AddLeft>
               <AddRight>
@@ -98,6 +101,7 @@ export default function Services() {
           </div>
         </div>
       </div>
+      
     </Wrapper>
   );
 }

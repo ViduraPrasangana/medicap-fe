@@ -7,6 +7,14 @@ import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
+
+const scrollTo = (id) => {
+  const element = document.getElementById(id);
+  element.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+
 export default function Header() {
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
@@ -18,7 +26,7 @@ export default function Header() {
             voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
           </HeaderP>
           <BtnWrapper>
-            <FullButton title="Get Started" />
+            <FullButton title="Get Started" action={()=>scrollTo("upload-section")}/>
           </BtnWrapper>
         </div>
       </LeftSide>
