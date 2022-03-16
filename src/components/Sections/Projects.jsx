@@ -86,7 +86,7 @@ export default function Projects({image,caption}) {
           </div>
         </div>
       </div> */}
-      <div className="lightBg">
+      {image && <div className="lightBg">
         <div className="container">
           <Advertising className="flexSpaceCenter">
             <AddLeft>
@@ -97,8 +97,8 @@ export default function Projects({image,caption}) {
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">{caption}</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
+              <h2 className="font40 extraBold">Report</h2>
+              <h4 className="font20 semiBold">"{caption}"</h4>
               {/* <p className="font12">
                 {caption}
               </p> */}
@@ -113,7 +113,7 @@ export default function Projects({image,caption}) {
             </AddRight>
           </Advertising>
         </div>
-      </div>
+      </div>}
     </Wrapper>
   );
 }
@@ -172,7 +172,7 @@ const AddRight = styled.div`
 `;
 const AddLeftInner = styled.div`
   width: 100%;
-  position: absolute;
+  ${'' /* position: absolute; */}
   top: -300px;
   left: 0;
   @media (max-width: 1190px) {

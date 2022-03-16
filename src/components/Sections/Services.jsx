@@ -10,7 +10,7 @@ import AddImage2 from "../../assets/img/add/2.png";
 import AddImage3 from "../../assets/img/add/3.png";
 import AddImage4 from "../../assets/img/add/4.png";
 
-export default function Services({selectAction,inputFile,handleFileInputChange}) {
+export default function Services({selectAction,inputFile,handleFileInputChange,clear}) {
   
   return (
     <Wrapper id="services">
@@ -70,11 +70,11 @@ export default function Services({selectAction,inputFile,handleFileInputChange})
                   <div style={{ width: "190px" }}>
                   <input type='file' id='file' accept='.png, .jpg, .jpeg' ref={inputFile} style={{display: 'none'}} onChange={(e) => handleFileInputChange(e)}/>
 
-                    <FullButton title="Select a file" action={() => selectAction()} />
+                    <FullButton title="Select a X-Ray image" action={() => selectAction()} />
                   </div>
-                  {/* <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
-                  </div> */}
+                  <div style={{ width: "190px", marginLeft: "15px" }}>
+                    <FullButton title="Clear" action={() => clear()} border />
+                  </div>
                 </ButtonsRow>
               </AddLeft>
               <AddRight>

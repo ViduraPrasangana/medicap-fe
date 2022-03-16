@@ -15,7 +15,6 @@ export default function Contact() {
             <p className="font13">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>

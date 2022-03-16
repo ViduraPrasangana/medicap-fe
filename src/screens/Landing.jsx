@@ -1,4 +1,4 @@
-import React,{useRef,useState} from "react";
+import React, { useRef, useState } from "react";
 // Sections
 import TopNavbar from "../components/Nav/TopNavbar";
 import Header from "../components/Sections/Header";
@@ -9,26 +9,32 @@ import Pricing from "../components/Sections/Pricing";
 import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer"
 import axios from 'axios';
+const scrollTo = (id) => {
+  const element = document.getElementById(id);
+  element.scrollIntoView({
+    behavior: "smooth",
+  });
+};
 
 export default function Landing() {
   const [file, setFile] = useState(null);
   const [base64URL, setBase64URL] = useState(null);
   const [caption, setCaption] = useState(null);
-  const inputFile = useRef(null); 
+  const inputFile = useRef(null);
   const onButtonClick = () => {
     // `current` points to the mounted file input element
     inputFile.current.click();
-   };
+  };
   const getBase64 = (file) => {
     return new Promise(resolve => {
       let fileInfo;
       let baseURL = "";
       // Make new FileReader
       let reader = new FileReader();
-  
+
       // Convert the file to base64 text
       reader.readAsDataURL(file);
-  
+
       // on reader load somthing...
       reader.onload = () => {
         // Make a fileInfo Object
@@ -50,26 +56,36 @@ export default function Landing() {
         setFile(
           file
         );
-        axios.post("http://127.0.0.1:5000/predict",{image:result.replace("data:image/jpeg;base64,","")}).then((res)=>{
+        axios.post("http://127.0.0.1:5000/predict", { image: result.replace("data:image/jpeg;base64,", "") }).then((res) => {
           console.log(res)
           setCaption(res.data.results[0])
-        }).catch(err=>
-          console.log(err))
+        }).catch(err => {
+          console.log(err)
+          setCaption(null)
+        }
+        )
+        scrollTo("projects")
       })
       .catch(err => {
         console.log(err);
       });
-  
+
     setFile(
       target.files[0]
-    );
+    )
   };
+
+  const clear = () => {
+    setFile(null)
+    setBase64URL(null)
+    setCaption(null)
+  }
   return (
     <>
       <TopNavbar />
       <Header />
-      <Services selectAction={onButtonClick} inputFile={inputFile} handleFileInputChange={handleFileInputChange}/>
-      <Projects image={base64URL} caption={caption}/>
+      <Services selectAction={onButtonClick} inputFile={inputFile} handleFileInputChange={handleFileInputChange} clear={clear} />
+      <Projects image={base64URL} caption={caption} />
       {/* <Blog />
       <Pricing /> */}
       <Contact />

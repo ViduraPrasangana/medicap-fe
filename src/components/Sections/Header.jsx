@@ -3,7 +3,7 @@ import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import HeaderImage from "../../assets/img/header-img.png";
+import HeaderImage from "../../assets/img/sample-1.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
@@ -20,10 +20,9 @@ export default function Header() {
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We are Digital Agency.</h1>
+          <h1 className="extraBold font60">MediCap:<br/>Chest X-Ray caption generator</h1>
           <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            
           </HeaderP>
           <BtnWrapper>
             <FullButton title="Get Started" action={()=>scrollTo("upload-section")}/>
@@ -39,9 +38,9 @@ export default function Header() {
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it.</em>
+                <em>Heart size within normal limits, stable mediastinal and hilar contours. No focal alveolar consolidation, no definite pleural effusion seen. No typical findings of pulmonary edema.</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
+              {/* <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p> */}
             </div>
           </QuoteWrapper>
           <DotsWrapper>
