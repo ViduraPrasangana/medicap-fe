@@ -24,9 +24,9 @@ Medicap is a state-of-art report generation tool for chest X-Ray images. The mod
 
 
 ### Contribution
-Supervisor - Dr. Thanuja Ambegoda
+Supervisor - [Dr. Thanuja Ambegoda](https://github.com/thanujadax)
 
 Project group members 
-- Hemaka Hansika
-- Sachini Abeygunawardhana
-- Vidura Wijerathna
+- [Hemaka Hansika](https://github.com/hemakaraveenhansika)
+- [Sachini Abeygunawardhana](https://github.com/SachiniAbeygunawardhana)
+- [Vidura Wijerathna](https://github.com/ViduraPrasangana)
