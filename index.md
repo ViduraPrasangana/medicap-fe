@@ -7,7 +7,7 @@ Medicap is a state-of-art report generation tool for chest X-Ray images. The mod
 - Backend - [https://github.com/ViduraPrasangana/BE](https://github.com/ViduraPrasangana/BE)
 
 ### Datasets used for training
-- Indiana University X-Ray
+- Indiana University Chest X-Ray dataset
 
 ### Architecture
 
