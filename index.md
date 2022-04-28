@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+## MediCap
 
-You can use the [editor on GitHub](https://github.com/ViduraPrasangana/medicap-fe/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Medicap is a state-of-art report generation tool for chest X-Ray images. The model uses CheXNet as image feature extractor and Memory-driven Transformer as a caption generator.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Links
+- Frontend - https://github.com/ViduraPrasangana/medicap-fe
+- Backend - https://github.com/ViduraPrasangana/BE
 
-### Markdown
+### Datasets used for training
+- Indiana University X-Ray
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Architecture
 
-```markdown
-Syntax highlighted code block
+![Architecture](https://github.com/ViduraPrasangana/medicap-fe/blob/gh-pages/arch.png)
 
-# Header 1
-## Header 2
-### Header 3
+### Results Comparison with state-of-art
 
-- Bulleted
-- List
+| Model               | BLEU-1 | BLEU-2 | BLEU-3 | BLUE-4 | METEOR | ROUGE-L |
+|---------------------|--------|--------|--------|--------|--------|---------|
+| HRGR-Agent          | 0.438  | 0.298  | 0.208  | 0.151  | -      | 0.322   |
+| CMAS-RL             | 0.464  | 0.301  | 0.210  | 0.154  | -      | 0.362   |
+| R2Gen               | 0.470  | 0.304  | 0.219  | 0.165  | 0.187  | 0.371   |
+| R2Gen+CheXNet(Ours) | 0.498  | 0.320  | 0.299  | 0.169  | 0.205  | 0.379   |
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+### Contribution
+Supervisor - Dr. Thanuja Ambegoda
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ViduraPrasangana/medicap-fe/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Project group members 
+- Hemaka Hansika
+- Sachini Abeygunawardhana
+- Vidura Wijerathna
