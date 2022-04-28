@@ -11,7 +11,7 @@ Medicap is a state-of-art report generation tool for chest X-Ray images. The mod
 
 ### Architecture
 
-![Architecture](https://github.com/ViduraPrasangana/medicap-fe/blob/gh-pages/arch.png)
+![Architecture](/docs/assets/arch.png)
 
 ### Results Comparison with state-of-art
 
