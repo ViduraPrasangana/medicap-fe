@@ -3,8 +3,8 @@
 Medicap is a state-of-art report generation tool for chest X-Ray images. The model uses CheXNet as image feature extractor and Memory-driven Transformer as a caption generator.
 
 ### Links
-- Frontend - https://github.com/ViduraPrasangana/medicap-fe
-- Backend - https://github.com/ViduraPrasangana/BE
+- Frontend - [https://github.com/ViduraPrasangana/medicap-fe](https://github.com/ViduraPrasangana/medicap-fe)
+- Backend - [https://github.com/ViduraPrasangana/BE](https://github.com/ViduraPrasangana/BE)
 
 ### Datasets used for training
 - Indiana University X-Ray
