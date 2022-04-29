@@ -60,11 +60,10 @@ export default function Services({selectAction,inputFile,handleFileInputChange,c
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
-                <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                {/* <h4 className="font15 semiBold">A few words about company</h4> */}
+                <h2 className="font40 extraBold">Accurate, Fast & Responsive</h2>
+                <p className="font15">
+                  Now you don't need to wait in long queues to get your chest x-ray report! This website generates captions for any chest x-ray image within few seconds.
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
                   <div style={{ width: "190px" }}>

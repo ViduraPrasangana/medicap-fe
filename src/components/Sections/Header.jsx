@@ -21,8 +21,8 @@ export default function Header() {
       <LeftSide className="flexCenter">
         <div>
           <h1 className="extraBold font60">MediCap:<br/>Chest X-Ray caption generator</h1>
-          <HeaderP className="font13 semiBold">
-            
+          <HeaderP className="font20 semiBold">
+          Read your Chest X-Ray within few seconds!
           </HeaderP>
           <BtnWrapper>
             <FullButton title="Get Started" action={()=>scrollTo("upload-section")}/>

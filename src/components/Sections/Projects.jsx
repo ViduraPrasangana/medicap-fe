@@ -128,7 +128,7 @@ const HeaderInfo = styled.div`
 `;
 const Advertising = styled.div`
   padding: 100px 0;
-  margin: 100px 0;
+  ${'' /* margin: 100px 0; */}
   position: relative;
   @media (max-width: 1160px) {
     padding: 60px 0 40px 0;

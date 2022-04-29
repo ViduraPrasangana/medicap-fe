@@ -50,13 +50,14 @@ export default function Landing() {
     let f = target.files[0];
     setFile(f)
     console.log(f)
+    setCaption(null)
     getBase64(f)
       .then((result) => {
         setBase64URL(result);
         setFile(
           file
         );
-        axios.post("http://127.0.0.1:5000/predict", { image: result.replace("data:image/jpeg;base64,", "") }).then((res) => {
+        axios.post("http://127.0.0.1:5000/predict", { image: result.replace("data:image/jpeg;base64,", "").replace("data:image/png;base64,", "").replace("data:image/jpg;base64,", "") }).then((res) => {
           console.log(res)
           setCaption(res.data.results[0])
         }).catch(err => {
